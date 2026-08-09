@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Premium Sales Training Playbook | JASUNN Growth Solutions</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Inter"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            900: '#1e3a8a',
+                        },
+                        dark: {
+                            bg: '#0a0a0a',
+                            card: '#161616',
+                            border: '#27272a',
+                            text: '#f8fafc',
+                            sec: '#94a3b8'
+                        },
+                        status: {
+                            success: '#10b981',
+                            warning: '#f59e0b',
+                            danger: '#ef4444'
+                        }
+                    },
+                    backgroundImage: {
+                        'cover-gradient': 'linear-gradient(135deg, #0a0a0a 0%, #0f172a 50%, #1e3a8a 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #f8fafc;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
+
+        /* Card Hover Effects */
+        .glow-card {
+            transition: all 0.3s ease;
+        }
+        .glow-card:hover {
+            border-color: rgba(37, 99, 235, 0.5);
+            box-shadow: 0 0 20px rgba(37, 99, 235, 0.15);
+            transform: translateY(-2px);
+        }
+
+        /* Hinglish Box */
+        .hinglish-box {
+            position: relative;
+            border: 2px dashed rgba(37, 99, 235, 0.4);
+            background: rgba(37, 99, 235, 0.05);
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            margin-top: 1.25rem;
+        }
+        .hinglish-label {
+            position: absolute;
+            top: -0.75rem;
+            right: 1rem;
+            background: #0a0a0a;
+            padding: 0 0.5rem;
+            font-size: 0.65rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            color: #60a5fa;
+            border: 1px solid rgba(37, 99, 235, 0.4);
+            border-radius: 0.25rem;
+        }
+
+        /* Flowchart Arrow */
+        .flow-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2563eb;
+            font-size: 1.5rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            body { background-color: #0a0a0a; }
+            #sidebar, #mobile-header { display: none !important; }
+            main { margin-left: 0 !important; width: 100% !important; padding: 0 !important; }
+            
+            .module-section { page-break-after: always; break-after: page; padding-top: 0 !important; margin-top: 0 !important; }
+            .cover-slide { height: 100vh; page-break-after: always; break-after: page; }
+            
+            .text-dark-sec { color: #94a3b8 !important; }
+        }
+
+        /* Sidebar active link */
+        .nav-link.active {
+            background-color: rgba(37, 99, 235, 0.1);
+            color: #60a5fa;
+            border-right: 2px solid #2563eb;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-600 selection:text-white overflow-x-hidden w-full">
+
+    <!-- Mobile Header -->
+    <header id="mobile-header" class="lg:hidden fixed top-0 left-0 w-full max-w-full h-16 bg-dark-bg/90 backdrop-blur-md border-b border-dark-border z-50 flex items-center justify-between px-4">
+        <div class="font-bold tracking-tight text-white flex items-center gap-2">
+            <i class="fa-solid fa-bolt text-brand-500"></i> JASUNN
+        </div>
+        <button id="menu-btn" class="w-11 h-11 flex items-center justify-center text-white focus:outline-none" aria-label="Toggle Menu">
+            <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <aside id="sidebar" class="fixed top-0 left-0 h-screen w-64 max-w-[80vw] bg-dark-card border-r border-dark-border z-40 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 flex flex-col pt-16 lg:pt-0">
+        <div class="p-6 hidden lg:flex items-center gap-3 border-b border-dark-border">
+            <div class="w-8 h-8 shrink-0 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold"><i class="fa-solid fa-bolt"></i></div>
+            <span class="font-bold tracking-tight text-lg text-white">JASUNN<br><span class="text-xs font-normal text-dark-sec">Playbook</span></span>
+        </div>
+        <div class="flex-1 overflow-y-auto py-4">
+            <nav class="flex flex-col gap-1 px-3">
+                <a href="#m1" class="nav-link px-3 py-2.5 rounded-lg text-sm text-dark-sec hover:text-white hover:bg-white/5 transition-colors">1. What We Sell</a>
+                <a href="#m2" class="nav-link px-3 py-2.5 rounded-lg text-sm text-dark-sec hover:text-white hover:bg-white/5 transition-colors">2. Real Services</a>
+                <a href="#m3" class="nav-link px-3 py-2.5 rounded-lg text-sm text-dark-sec hover:text-white hover:bg-white/5 transition-colors">3. Real Pricing</a>
+                <a href="#m4" class="nav-link px-3 py-2.5 rounded-lg text-sm text-dark-sec hover:text-white hover:bg-white/5 transition-colors">4. Cold Call Framework</a>
+                <a href="#m5" class="nav-link px-3 py-2.5 rounded-lg text-sm text-dark-sec hover:text-white hover:bg-white/5 transition-colors">5. Opening Scripts</a>
+                <a href="#m6" class="nav-link px-3 py-2.5 rounded-lg text-sm text-dark-sec hover:text-white hover:bg-white/5 transition-colors">6. Discovery Questions</a>
+                <a href="#m7" class="nav-link px-3 py-2.5 rounded-lg text-sm text-dark-sec hover:text-white hover:bg-white/5 transition-colors">7. The Value Pitch</a>
+                <a href="#m8" class="nav-link px-3 py-2.5 rounded-lg text-sm text-dark-sec hover:text-white hover:bg-white/5 transition-colors">8. Objection Handling</a>
+                <a href="#m9" class="nav-link px-3 py-2.5 rounded-lg text-sm text-dark-sec hover:text-white hover:bg-white/5 transition-colors">9. Closing Techniques</a>
+                <a href="#m10" class="nav-link px-3 py-2.5 rounded-lg text-sm text-dark-sec hover:text-white hover:bg-white/5 transition-colors">10. WhatsApp Follow-Up</a>
+                <a href="#m11" class="nav-link px-3 py-2.5 rounded-lg text-sm text-dark-sec hover:text-white hover:bg-white/5 transition-colors">11. Daily SOP</a>
+                <a href="#m12" class="nav-link px-3 py-2.5 rounded-lg text-sm text-dark-sec hover:text-white hover:bg-white/5 transition-colors">12. Role Plays</a>
+                <a href="#final" class="nav-link px-3 py-2.5 rounded-lg text-sm text-brand-400 font-semibold hover:bg-white/5 transition-colors mt-4"><i class="fa-solid fa-flag-checkered mr-2"></i>Final Action</a>
+            </nav>
+        </div>
+        <div class="p-4 border-t border-dark-border text-xs text-dark-sec text-center">
+            Confidential Internal Doc
+        </div>
+    </aside>
+
+    <!-- Overlay for mobile menu -->
+    <div id="overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-30 hidden lg:hidden"></div>
+
+    <!-- Main Content Area -->
+    <main class="lg:ml-64 relative w-full lg:w-[calc(100%-16rem)] max-w-full overflow-x-hidden pt-16 lg:pt-0 flex flex-col">
+        
+        <!-- MODULE 1: WHAT WE ACTUALLY SELL -->
+        <section id="m1" class="module-section">
+            <!-- Cover Slide -->
+            <div class="cover-slide min-h-[calc(100vh-4rem)] lg:min-h-screen flex flex-col justify-center items-center bg-cover-gradient relative px-6 py-12 text-center w-full">
+                <div class="absolute top-8 right-8 text-white/20 text-4xl lg:text-5xl font-extrabold tracking-tighter">01</div>
+                <h3 class="text-brand-400 font-semibold uppercase tracking-widest text-xs md:text-sm mb-4">Module 01</h3>
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6 break-words">What JASUNN<br><span class="font-light italic text-white/80">Actually</span> Sells</h1>
+                <p class="text-lg md:text-xl lg:text-2xl text-dark-sec max-w-2xl font-light px-4">"We are not website developers. We are Digital Growth Partners."</p>
+                <div class="mt-12 bg-dark-card/50 backdrop-blur px-4 md:px-6 py-3 rounded-full border border-white/10 text-xs md:text-sm flex flex-col md:flex-row gap-2 md:gap-4 items-center">
+                    <div><span class="text-dark-sec">Founder:</span> <span class="font-bold text-white">Harshdeep Singh</span></div>
+                    <div class="hidden md:block">|</div> 
+                    <div><span class="text-dark-sec">Markets:</span> <span class="font-bold text-white">Gurgaon, Delhi NCR, Noida</span></div>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="p-6 md:p-12 lg:p-20 max-w-5xl mx-auto w-full">
+                <h2 class="text-2xl md:text-3xl font-bold mb-8 border-b border-dark-border pb-4">6 Outcomes We Sell (Not Services)</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                    <div class="glow-card bg-dark-card border border-dark-border rounded-2xl p-6 flex items-start gap-4">
+                        <div class="text-brand-500 text-2xl shrink-0"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div><h4 class="font-bold text-lg mb-1">Build Trust</h4><p class="text-sm text-dark-sec">First impressions that instantly legitimize the business.</p></div>
+                    </div>
+                    <div class="glow-card bg-dark-card border border-dark-border rounded-2xl p-6 flex items-start gap-4">
+                        <div class="text-brand-500 text-2xl shrink-0"><i class="fa-solid fa-magnifying-glass-location"></i></div>
+                        <div><h4 class="font-bold text-lg mb-1">Get Found</h4><p class="text-sm text-dark-sec">Ranking locally on Google Maps & Search.</p></div>
+                    </div>
+                    <div class="glow-card bg-dark-card border border-dark-border rounded-2xl p-6 flex items-start gap-4">
+                        <div class="text-brand-500 text-2xl shrink-0"><i class="fa-solid fa-filter-circle-dollar"></i></div>
+                        <div><h4 class="font-bold text-lg mb-1">Direct Leads</h4><p class="text-sm text-dark-sec">Turning local traffic into warm WhatsApp inquiries.</p></div>
+                    </div>
+                    <div class="glow-card bg-dark-card border border-dark-border rounded-2xl p-6 flex items-start gap-4">
+                        <div class="text-brand-500 text-2xl shrink-0"><i class="fa-solid fa-link-slash"></i></div>
+                        <div><h4 class="font-bold text-lg mb-1">Independence</h4><p class="text-sm text-dark-sec">Reducing reliance and spend on portals like Practo/MagicBricks.</p></div>
+                    </div>
+                    <div class="glow-card bg-dark-card border border-dark-border rounded-2xl p-6 flex items-start gap-4">
+                        <div class="text-brand-500 text-2xl shrink-0"><i class="fa-solid fa-user-tie"></i></div>
+                        <div><h4 class="font-bold text-lg mb-1">Look Pro</h4><p class="text-sm text-dark-sec">Matching their digital presence to their actual expertise.</p></div>
+                    </div>
+                    <div class="glow-card bg-dark-card border border-dark-border rounded-2xl p-6 flex items-start gap-4">
+                        <div class="text-brand-500 text-2xl shrink-0"><i class="fa-solid fa-robot"></i></div>
+                        <div><h4 class="font-bold text-lg mb-1">24/7 Machine</h4><p class="text-sm text-dark-sec">A sales rep that never sleeps, takes breaks, or asks for leave.</p></div>
+                    </div>
+                </div>
+
+                <h2 class="text-2xl md:text-3xl font-bold mb-8 border-b border-dark-border pb-4">Table of Ideal Clients</h2>
+                <div class="w-full max-w-full overflow-x-auto rounded-xl border border-dark-border shadow-sm">
+                    <table class="w-full text-left border-collapse min-w-[600px]">
+                        <thead>
+                            <tr class="bg-dark-card text-dark-sec text-xs sm:text-sm uppercase tracking-wider">
+                                <th class="p-4 border-b border-dark-border font-semibold">Client Profile</th>
+                                <th class="p-4 border-b border-dark-border font-semibold">Core Pain Point</th>
+                                <th class="p-4 border-b border-dark-border font-semibold text-brand-400">Best Package</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm">
+                            <tr class="hover:bg-white/5 transition-colors border-b border-dark-border">
+                                <td class="p-4 font-bold align-top"><i class="fa-solid fa-building text-brand-500 mr-2 w-4"></i> Real Estate Brokers</td>
+                                <td class="p-4 text-dark-sec">Paying 30K+/month to portals for shared/junk leads.</td>
+                                <td class="p-4 font-semibold text-white">Growth / Authority</td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors border-b border-dark-border">
+                                <td class="p-4 font-bold align-top"><i class="fa-solid fa-user-doctor text-brand-500 mr-2 w-4"></i> Doctors / Clinics</td>
+                                <td class="p-4 text-dark-sec">Highly dependent on Practo taking a cut.</td>
+                                <td class="p-4 font-semibold text-white">Growth</td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors border-b border-dark-border">
+                                <td class="p-4 font-bold align-top"><i class="fa-solid fa-scale-balanced text-brand-500 mr-2 w-4"></i> CA / Lawyers</td>
+                                <td class="p-4 text-dark-sec">Word of mouth/referrals are drying up.</td>
+                                <td class="p-4 font-semibold text-white">Authority</td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors border-b border-dark-border">
+                                <td class="p-4 font-bold align-top"><i class="fa-solid fa-city text-brand-500 mr-2 w-4"></i> Builders / Developers</td>
+                                <td class="p-4 text-dark-sec">Inventory not moving; NRI buyers don't trust them.</td>
+                                <td class="p-4 font-semibold text-white">Authority</td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors border-b border-dark-border">
+                                <td class="p-4 font-bold align-top"><i class="fa-solid fa-store text-brand-500 mr-2 w-4"></i> Local Shops</td>
+                                <td class="p-4 text-dark-sec">Zero online presence; losing to nearby competitors.</td>
+                                <td class="p-4 font-semibold text-white">Launch / Growth</td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="p-4 font-bold align-top"><i class="fa-solid fa-chalkboard-user text-brand-500 mr-2 w-4"></i> Coaches / Consultants</td>
+                                <td class="p-4 text-dark-sec">Instagram followers aren't converting to paying clients.</td>
+                                <td class="p-4 font-semibold text-white">Growth / Authority</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODULE 2: OUR REAL SERVICES -->
+        <section id="m2" class="module-section">
+            <div class="cover-slide min-h-[calc(100vh-4rem)] lg:min-h-screen flex flex-col justify-center items-center bg-cover-gradient relative px-6 py-12 text-center w-full">
+                <div class="absolute top-8 right-8 text-white/20 text-4xl lg:text-5xl font-extrabold tracking-tighter">02</div>
+                <h3 class="text-brand-400 font-semibold uppercase tracking-widest text-xs md:text-sm mb-4">Module 02</h3>
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6">Our Real<br><span class="font-light italic text-white/80">Services</span></h1>
+                <p class="text-lg md:text-xl lg:text-2xl text-dark-sec max-w-2xl font-light">What we actually deliver to fulfill the outcomes.</p>
+            </div>
+
+            <div class="p-6 md:p-12 lg:p-20 max-w-5xl mx-auto space-y-12 w-full">
+                
+                <!-- Service 1 -->
+                <div class="glow-card bg-dark-card border border-dark-border rounded-3xl p-6 md:p-8">
+                    <h3 class="text-xl md:text-2xl font-bold mb-4 flex items-center gap-3"><i class="fa-solid fa-laptop-code text-brand-500 shrink-0"></i> Service 1: High-Converting Web Design</h3>
+                    <p class="text-dark-sec mb-6 text-sm md:text-base">Includes: Custom design, mobile-first, under 3-sec load, WhatsApp integration, lead forms, SSL, Analytics, basic SEO.</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <p class="text-xs font-bold text-dark-sec uppercase tracking-widest mb-2">English Pitch</p>
+                            <p class="text-sm bg-black/50 p-4 rounded-xl border border-white/5 text-gray-200">"We don't just build a digital brochure. We build a lead-generation machine optimized for mobile speed and designed to drive direct WhatsApp inquiries to your phone."</p>
+                        </div>
+                        <div class="hinglish-box">
+                            <span class="hinglish-label">HINGLISH</span>
+                            <p class="text-sm text-gray-200">"Sir hum sirf digital brochure nahi banate. Hum ek lead-generation machine build karte hain jo mobile pe fast load hoti hai, jisse direct WhatsApp inquiries aapke phone par aayengi."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glow-card bg-dark-card border border-dark-border rounded-3xl p-6 md:p-8">
+                    <h3 class="text-xl md:text-2xl font-bold mb-4 flex items-center gap-3"><i class="fa-brands fa-google text-brand-500 shrink-0"></i> Service 2: Google Business Profile Mastery</h3>
+                    <p class="text-dark-sec mb-4 text-sm md:text-base">Includes: Full setup, verification, description optimization, services listing, image optimization, review strategy, weekly posting.</p>
+                    <div class="inline-block bg-brand-900/30 border border-brand-500/30 text-brand-400 font-bold px-4 py-2 rounded-lg text-xs md:text-sm mb-6 max-w-full overflow-hidden">
+                        <i class="fa-solid fa-bolt mr-1"></i> Key Stat: Businesses with complete GBP get 7x more clicks.
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <p class="text-xs font-bold text-dark-sec uppercase tracking-widest mb-2">English Pitch</p>
+                            <p class="text-sm bg-black/50 p-4 rounded-xl border border-white/5 text-gray-200">"When someone searches for your service nearby, you need to be in the top 3 on Maps. We optimize your profile completely so you capture that high-intent local traffic."</p>
+                        </div>
+                        <div class="hinglish-box">
+                            <span class="hinglish-label">HINGLISH</span>
+                            <p class="text-sm text-gray-200">"Jab koi aapas mein service search karta hai, aapko Maps ke top 3 mein aana zaroori hai. Hum aapki profile itni optimize karte hain ki woh local high-intent traffic seedha aapke paas aaye."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glow-card bg-dark-card border border-dark-border rounded-3xl p-6 md:p-8">
+                    <h3 class="text-xl md:text-2xl font-bold mb-6 flex items-center gap-3"><i class="fa-solid fa-screwdriver-wrench text-brand-500 shrink-0"></i> Service 3: Ongoing Care & Support</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-[#0a0a0a] border border-white/5 rounded-xl p-5 text-center hover:border-brand-500/30 transition-colors">
+                            <p class="font-bold text-white mb-2">Website Care</p>
+                            <p class="text-xl font-bold text-brand-400 mb-3">₹1,499<span class="text-xs font-normal text-dark-sec">/mo</span></p>
+                            <p class="text-xs text-dark-sec">Security backups, minor updates, technical support.</p>
+                        </div>
+                        <div class="bg-[#0a0a0a] border border-brand-500/50 rounded-xl p-5 text-center relative shadow-[0_0_15px_rgba(37,99,235,0.1)]">
+                            <div class="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-brand-600 text-white text-[10px] font-bold px-2 rounded tracking-wider">POPULAR</div>
+                            <p class="font-bold text-white mb-2">Growth Care</p>
+                            <p class="text-xl font-bold text-brand-400 mb-3">₹2,999<span class="text-xs font-normal text-dark-sec">/mo</span></p>
+                            <p class="text-xs text-dark-sec">Priority support, content updates, performance review.</p>
+                        </div>
+                        <div class="bg-[#0a0a0a] border border-white/5 rounded-xl p-5 text-center hover:border-brand-500/30 transition-colors">
+                            <p class="font-bold text-white mb-2">Premium Care</p>
+                            <p class="text-xl font-bold text-brand-400 mb-3">₹4,999<span class="text-xs font-normal text-dark-sec">/mo</span></p>
+                            <p class="text-xs text-dark-sec">Frequent updates, faster turnaround, dedicated handling.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- MODULE 3: REAL PRICING -->
+        <section id="m3" class="module-section">
+            <div class="cover-slide min-h-[calc(100vh-4rem)] lg:min-h-screen flex flex-col justify-center items-center bg-cover-gradient relative px-6 py-12 text-center w-full">
+                <div class="absolute top-8 right-8 text-white/20 text-4xl lg:text-5xl font-extrabold tracking-tighter">03</div>
+                <h3 class="text-brand-400 font-semibold uppercase tracking-widest text-xs md:text-sm mb-4">Module 03</h3>
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6">Real <span class="font-light italic text-white/80">Pricing</span></h1>
+                <p class="text-lg md:text-xl lg:text-2xl text-dark-sec max-w-2xl font-light px-4">Know the numbers, defend the value.</p>
+            </div>
+
+            <div class="p-6 md:p-12 lg:p-20 max-w-5xl mx-auto w-full">
+                
+                <h2 class="text-2xl md:text-3xl font-bold mb-8 border-b border-dark-border pb-4">Package Breakdown</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                    <!-- Launch -->
+                    <div class="bg-dark-card border border-dark-border rounded-2xl p-6 flex flex-col">
+                        <p class="text-xs sm:text-sm uppercase tracking-widest text-dark-sec font-bold mb-2">Launch Pack</p>
+                        <p class="text-2xl sm:text-3xl font-bold text-white mb-2">₹12,999</p>
+                        <p class="text-xs text-dark-sec mb-4">Startups, solo practitioners</p>
+                        <ul class="text-sm text-gray-300 space-y-3 mb-6 flex-1">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-brand-500 mt-1 shrink-0"></i>Up to 5 pages</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-brand-500 mt-1 shrink-0"></i>7-10 days delivery</li>
+                            <li class="pt-2 border-t border-white/5 font-semibold text-white text-xs mt-2">Standard Inclusions:</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-dark-sec mt-0.5 shrink-0 text-xs"></i>Mobile responsive</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-dark-sec mt-0.5 shrink-0 text-xs"></i>WhatsApp & Contact form</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-dark-sec mt-0.5 shrink-0 text-xs"></i>Basic SEO & Analytics</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-dark-sec mt-0.5 shrink-0 text-xs"></i>SSL & 2 revision rounds</li>
+                        </ul>
+                    </div>
+                    <!-- Growth -->
+                    <div class="bg-dark-card border-2 border-brand-500/50 rounded-2xl p-6 flex flex-col relative shadow-[0_0_20px_rgba(37,99,235,0.1)]">
+                        <div class="absolute -top-3 right-4 bg-brand-600 text-white text-[10px] font-bold px-2 py-1 rounded tracking-widest">HOT</div>
+                        <p class="text-xs sm:text-sm uppercase tracking-widest text-brand-400 font-bold mb-2">Growth Pack</p>
+                        <p class="text-2xl sm:text-3xl font-bold text-white mb-2">₹18,999</p>
+                        <p class="text-xs text-dark-sec mb-4">Established brokers, CA, clinics</p>
+                        <ul class="text-sm text-gray-300 space-y-3 mb-6 flex-1">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-brand-500 mt-1 shrink-0"></i>Up to 10 pages</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-brand-500 mt-1 shrink-0"></i>7-10 days delivery</li>
+                            <li class="pt-2 border-t border-white/5 font-bold text-brand-400 text-xs mt-2">Growth Adds:</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-plus text-brand-400 mt-0.5 shrink-0 text-xs"></i>GBP optimization</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-plus text-brand-400 mt-0.5 shrink-0 text-xs"></i>Lead capture forms</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-plus text-brand-400 mt-0.5 shrink-0 text-xs"></i>Speed optimization</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-plus text-brand-400 mt-0.5 shrink-0 text-xs"></i>30-day support</li>
+                        </ul>
+                    </div>
+                    <!-- Authority -->
+                    <div class="bg-dark-card border border-dark-border rounded-2xl p-6 flex flex-col md:col-span-2 lg:col-span-1">
+                        <p class="text-xs sm:text-sm uppercase tracking-widest text-dark-sec font-bold mb-2">Authority Pack</p>
+                        <p class="text-2xl sm:text-3xl font-bold text-white mb-2">₹29,999</p>
+                        <p class="text-xs text-dark-sec mb-4">Builders, developers, consultants</p>
+                        <ul class="text-sm text-gray-300 space-y-3 mb-6 flex-1">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-brand-500 mt-1 shrink-0"></i>Up to 15 pages</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-brand-500 mt-1 shrink-0"></i>10-14 days delivery</li>
+                            <li class="pt-2 border-t border-white/5 font-semibold text-white text-xs mt-2">Authority Adds:</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-plus text-white mt-0.5 shrink-0 text-xs"></i>Custom design</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-plus text-white mt-0.5 shrink-0 text-xs"></i>Dedicated landing page</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-plus text-white mt-0.5 shrink-0 text-xs"></i>Advanced lead forms</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-plus text-white mt-0.5 shrink-0 text-xs"></i>60-day support</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-brand-900/10 border border-brand-500/20 rounded-3xl p-6 md:p-8 w-full max-w-full">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-6 flex items-center gap-2"><i class="fa-solid fa-brain text-brand-500 shrink-0"></i> Pricing Psychology</h3>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <p class="font-bold text-brand-400 mb-1">1. ROI Reframe</p>
+                            <p class="text-sm text-gray-300">"2 extra leads/month × ₹25,000 commission = ₹6L/year. Investment is just ₹18,999."</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-brand-400 mb-1">2. Portal Comparison</p>
+                            <p class="text-sm text-gray-300">"₹20K/month to MagicBricks = ₹2.4L/year. Website is ₹18,999 one-time."</p>
+                        </div>
+                        <div class="mt-6 border-t border-red-500/20 pt-6">
+                            <p class="font-bold text-status-danger mb-3 flex items-center gap-2"><i class="fa-solid fa-triangle-exclamation"></i> NEVER DO:</p>
+                            <ul class="list-disc list-inside text-sm text-gray-400 space-y-2">
+                                <li>Say "Price negotiable hai" (Destroys value).</li>
+                                <li>Say "Expensive hai lekin..." (Implies you agree it's too high).</li>
+                                <li>Give the price before understanding their specific problem.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- MODULE 4: COLD CALL FRAMEWORK -->
+        <section id="m4" class="module-section">
+            <div class="cover-slide min-h-[calc(100vh-4rem)] lg:min-h-screen flex flex-col justify-center items-center bg-cover-gradient relative px-6 py-12 text-center w-full">
+                <div class="absolute top-8 right-8 text-white/20 text-4xl lg:text-5xl font-extrabold tracking-tighter">04</div>
+                <h3 class="text-brand-400 font-semibold uppercase tracking-widest text-xs md:text-sm mb-4">Module 04</h3>
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6">Cold Call<br><span class="font-light italic text-white/80">Framework</span></h1>
+                <p class="text-lg md:text-xl lg:text-2xl text-dark-sec max-w-2xl font-light px-4">Structure outlasts luck.</p>
+            </div>
+
+            <div class="p-6 md:p-12 lg:p-20 max-w-5xl mx-auto w-full">
+                
+                <div class="flex flex-col md:flex-row gap-6 md:gap-8 mb-16">
+                    <div class="flex-1 bg-dark-card border border-dark-border rounded-3xl p-6 md:p-8 w-full">
+                        <h3 class="text-lg md:text-xl font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-stopwatch text-brand-500 shrink-0"></i> 2-Min Pre-Call Prep</h3>
+                        <ul class="text-sm text-dark-sec space-y-3">
+                            <li class="flex items-start gap-2"><i class="fa-regular fa-square-check text-brand-400 mt-1 shrink-0"></i> Research their Google listing</li>
+                            <li class="flex items-start gap-2"><i class="fa-regular fa-square-check text-brand-400 mt-1 shrink-0"></i> Check Google Maps reviews</li>
+                            <li class="flex items-start gap-2"><i class="fa-regular fa-square-check text-brand-400 mt-1 shrink-0"></i> Search Justdial/Portals</li>
+                            <li class="flex items-start gap-2 text-white font-bold"><i class="fa-regular fa-square-check text-brand-400 mt-1 shrink-0"></i> Note ONE specific observation</li>
+                        </ul>
+                    </div>
+                    <div class="flex-1 bg-gradient-to-br from-brand-900/40 to-dark-bg border border-brand-500/30 rounded-3xl p-6 md:p-8 flex flex-col justify-center text-center w-full">
+                        <i class="fa-solid fa-head-side-virus text-4xl text-brand-400 mb-4"></i>
+                        <p class="text-xs uppercase tracking-widest text-dark-sec font-bold mb-2">The Mindset</p>
+                        <p class="text-xl md:text-2xl font-bold text-white">"I am calling to HELP,<br>not to sell."</p>
+                    </div>
+                </div>
+
+                <h2 class="text-2xl md:text-3xl font-bold mb-8 border-b border-dark-border pb-4 text-center">The 5-Stage Call Flow</h2>
+                
+                <!-- Flexbox Flowchart -->
+                <div class="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 mb-16 w-full max-w-full overflow-hidden px-2">
+                    
+                    <div class="bg-dark-card border border-dark-border rounded-xl p-3 md:p-4 w-full md:w-32 lg:w-40 text-center glow-card shrink-0">
+                        <p class="text-brand-500 font-bold text-[10px] md:text-xs mb-1">0-15 sec</p>
+                        <p class="font-bold text-white text-sm md:text-base">1. OPEN</p>
+                        <p class="text-[10px] md:text-xs text-dark-sec mt-1">Greeting + Name + Obs.</p>
+                    </div>
+                    
+                    <div class="flow-arrow rotate-90 md:rotate-0 py-2 md:py-0 shrink-0"><i class="fa-solid fa-arrow-right"></i></div>
+                    
+                    <div class="bg-dark-card border border-dark-border rounded-xl p-3 md:p-4 w-full md:w-32 lg:w-40 text-center glow-card shrink-0">
+                        <p class="text-brand-500 font-bold text-[10px] md:text-xs mb-1">15-30 sec</p>
+                        <p class="font-bold text-white text-sm md:text-base">2. PERMISSION</p>
+                        <p class="text-[10px] md:text-xs text-dark-sec mt-1">"Sir bas 2 min?"</p>
+                    </div>
+
+                    <div class="flow-arrow rotate-90 md:rotate-0 py-2 md:py-0 shrink-0"><i class="fa-solid fa-arrow-right"></i></div>
+                    
+                    <div class="bg-dark-card border border-dark-border rounded-xl p-3 md:p-4 w-full md:w-32 lg:w-40 text-center glow-card shrink-0">
+                        <p class="text-brand-500 font-bold text-[10px] md:text-xs mb-1">30s-3m</p>
+                        <p class="font-bold text-white text-sm md:text-base">3. DISCOVERY</p>
+                        <p class="text-[10px] md:text-xs text-dark-sec mt-1">Ask questions, listen</p>
+                    </div>
+
+                    <div class="flow-arrow rotate-90 md:rotate-0 py-2 md:py-0 shrink-0"><i class="fa-solid fa-arrow-right"></i></div>
+                    
+                    <div class="bg-dark-card border border-dark-border rounded-xl p-3 md:p-4 w-full md:w-32 lg:w-40 text-center glow-card shrink-0">
+                        <p class="text-brand-500 font-bold text-[10px] md:text-xs mb-1">3-5 min</p>
+                        <p class="font-bold text-white text-sm md:text-base">4. VALUE PITCH</p>
+                        <p class="text-[10px] md:text-xs text-dark-sec mt-1">Show gap + solution</p>
+                    </div>
+
+                    <div class="flow-arrow rotate-90 md:rotate-0 py-2 md:py-0 shrink-0"><i class="fa-solid fa-arrow-right"></i></div>
+                    
+                    <div class="bg-brand-600 border border-brand-500 rounded-xl p-3 md:p-4 w-full md:w-32 lg:w-40 text-center shadow-[0_0_15px_rgba(37,99,235,0.4)] shrink-0">
+                        <p class="text-brand-200 font-bold text-[10px] md:text-xs mb-1">5-7 min</p>
+                        <p class="font-bold text-white text-sm md:text-base">5. CLOSE</p>
+                        <p class="text-[10px] md:text-xs text-brand-100 mt-1">Book 15-min mtg</p>
+                    </div>
+                </div>
+
+                <div class="bg-status-warning/10 border border-status-warning/30 rounded-2xl p-6 text-center w-full">
+                    <p class="text-status-warning font-bold uppercase tracking-widest text-xs mb-2">The Golden Rule</p>
+                    <p class="text-base md:text-xl font-medium text-white px-2">"Goal is NOT to sell a website on a cold call.<br class="hidden md:block">Goal is to book a 15-minute meeting."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODULE 5: OPENING SCRIPTS -->
+        <section id="m5" class="module-section">
+            <div class="cover-slide min-h-[calc(100vh-4rem)] lg:min-h-screen flex flex-col justify-center items-center bg-cover-gradient relative px-6 py-12 text-center w-full">
+                <div class="absolute top-8 right-8 text-white/20 text-4xl lg:text-5xl font-extrabold tracking-tighter">05</div>
+                <h3 class="text-brand-400 font-semibold uppercase tracking-widest text-xs md:text-sm mb-4">Module 05</h3>
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6">Opening <span class="font-light italic text-white/80">Scripts</span></h1>
+                <p class="text-lg md:text-xl lg:text-2xl text-dark-sec max-w-2xl font-light px-4">12 proven ways to grab attention in 15 seconds.</p>
+            </div>
+
+            <div class="p-6 md:p-12 lg:p-20 max-w-5xl mx-auto w-full">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                    
+                    <!-- Script 1 -->
+                    <div class="bg-dark-card border border-dark-border rounded-3xl p-6">
+                        <h4 class="font-bold text-lg mb-4 text-brand-100">1. Observation Opener</h4>
+                        <div class="text-sm bg-[#0a0a0a] p-4 rounded-xl border border-white/5 mb-3 text-gray-300">
+                            "I was looking at your Google listing and noticed no website link..."
+                        </div>
+                        <div class="hinglish-box">
+                            <span class="hinglish-label">HINGLISH</span>
+                            <p class="text-sm text-gray-200">"Sir main aapki Google listing dekh raha tha, maine notice kiya wahan koi website link nahi hai..."</p>
+                        </div>
+                    </div>
+
+                    <!-- Script 2 -->
+                    <div class="bg-dark-card border border-dark-border rounded-3xl p-6">
+                        <h4 class="font-bold text-lg mb-4 text-brand-100">2. Competitor Opener</h4>
+                        <div class="text-sm bg-[#0a0a0a] p-4 rounded-xl border border-white/5 mb-3 text-gray-300">
+                            "I help property consultants get direct leads. A broker in [Area] now gets 4-5 direct calls weekly..."
+                        </div>
+                        <div class="hinglish-box">
+                            <span class="hinglish-label">HINGLISH</span>
+                            <p class="text-sm text-gray-200">"Sir hum brokers ko direct leads lane mein help karte hain. [Area] mein ek client ko ab weekly 4-5 direct calls aate hain..."</p>
+                        </div>
+                    </div>
+
+                    <!-- Script 3 -->
+                    <div class="bg-dark-card border border-dark-border rounded-3xl p-6">
+                        <h4 class="font-bold text-lg mb-4 text-brand-100">3. Problem Opener</h4>
+                        <div class="text-sm bg-[#0a0a0a] p-4 rounded-xl border border-white/5 mb-3 text-gray-300">
+                            "I searched for dealers in [Area]. Your competitor shows up first, you're on page 2..."
+                        </div>
+                        <div class="hinglish-box">
+                            <span class="hinglish-label">HINGLISH</span>
+                            <p class="text-sm text-gray-200">"Sir maine [Area] mein dealers search kiya. Aapka competitor top pe aa raha hai, aur aap page 2 pe hain..."</p>
+                        </div>
+                    </div>
+
+                    <!-- Script 4 -->
+                    <div class="bg-dark-card border border-dark-border rounded-3xl p-6">
+                        <h4 class="font-bold text-lg mb-4 text-brand-100">4. Doctor Opener</h4>
+                        <div class="text-sm bg-[#0a0a0a] p-4 rounded-xl border border-white/5 mb-3 text-gray-300">
+                            "I help clinics get found when patients search nearby. I noticed no GBP..."
+                        </div>
+                        <div class="hinglish-box">
+                            <span class="hinglish-label">HINGLISH</span>
+                            <p class="text-sm text-gray-200">"Doctor, hum clinics ko local search mein rank karate hain. Maine notice kiya aapki Google profile optimized nahi hai..."</p>
+                        </div>
+                    </div>
+
+                    <!-- Script 5 -->
+                    <div class="bg-dark-card border border-dark-border rounded-3xl p-6">
+                        <h4 class="font-bold text-lg mb-4 text-brand-100">5. Cost Opener</h4>
+                        <div class="text-sm bg-[#0a0a0a] p-4 rounded-xl border border-white/5 mb-3 text-gray-300">
+                            "A broker pays ₹45K/month to MagicBricks for shared leads. I help build own lead machine..."
+                        </div>
+                        <div class="hinglish-box">
+                            <span class="hinglish-label">HINGLISH</span>
+                            <p class="text-sm text-gray-200">"Sir brokers MagicBricks ko 45K dete hain shared leads ke liye. Hum aapki khud ki lead machine banate hain fraction of cost pe..."</p>
+                        </div>
+                    </div>
+
+                    <!-- Script 6 -->
+                    <div class="bg-dark-card border border-dark-border rounded-3xl p-6">
+                        <h4 class="font-bold text-lg mb-4 text-brand-100">6. New Business Opener</h4>
+                        <div class="text-sm bg-[#0a0a0a] p-4 rounded-xl border border-white/5 mb-3 text-gray-300">
+                            "Congrats on new office. First 90 days online are critical for ranking..."
+                        </div>
+                        <div class="hinglish-box">
+                            <span class="hinglish-label">HINGLISH</span>
+                            <p class="text-sm text-gray-200">"Sir naye office ke liye badhai. Pehle 90 days digital ranking ke liye bahut critical hote hain..."</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Script 7 -->
+                    <div class="bg-dark-card border border-dark-border rounded-3xl p-6">
+                        <h4 class="font-bold text-lg mb-4 text-brand-100">7. Review Opener</h4>
+                        <div class="text-sm bg-[#0a0a0a] p-4 rounded-xl border border-white/5 mb-3 text-gray-300">
+                            "You have 8 reviews, competitor has 47. Patients trust social proof..."
+                        </div>
+                        <div class="hinglish-box">
+                            <span class="hinglish-label">HINGLISH</span>
+                            <p class="text-sm text-gray-200">"Sir aapke 8 reviews hain, competitor ke 47. Aaj kal log reviews dekh ke hi trust karte hain..."</p>
+                        </div>
+                    </div>
+
+                    <!-- Script 8 -->
+                    <div class="bg-dark-card border border-dark-border rounded-3xl p-6">
+                        <h4 class="font-bold text-lg mb-4 text-brand-100">8. Direct Opener</h4>
+                        <div class="text-sm bg-[#0a0a0a] p-4 rounded-xl border border-white/5 mb-3 text-gray-300">
+                            "I help professionals stop paying 30% commission to portals..."
+                        </div>
+                        <div class="hinglish-box">
+                            <span class="hinglish-label">HINGLISH</span>
+                            <p class="text-sm text-gray-200">"Sir hum professionals ko portals ko 30% commission dene se bachate hain apni direct online booking banwa kar..."</p>
+                        </div>
+                    </div>
+
+                    <!-- Script 9 -->
+                    <div class="bg-dark-card border border-dark-border rounded-3xl p-6">
+                        <h4 class="font-bold text-lg mb-4 text-brand-100">9. Slow Season Opener</h4>
+                        <div class="text-sm bg-[#0a0a0a] p-4 rounded-xl border border-white/5 mb-3 text-gray-300">
+                            "Smart ones use slow time to build online presence..."
+                        </div>
+                        <div class="hinglish-box">
+                            <span class="hinglish-label">HINGLISH</span>
+                            <p class="text-sm text-gray-200">"Sir slow season mein smart businesses apna online presence strong kar rahe hote hain aane wale peak ke liye..."</p>
+                        </div>
+                    </div>
+
+                    <!-- Script 10 -->
+                    <div class="bg-dark-card border border-dark-border rounded-3xl p-6">
+                        <h4 class="font-bold text-lg mb-4 text-brand-100">10. Local Opener</h4>
+                        <div class="text-sm bg-[#0a0a0a] p-4 rounded-xl border border-white/5 mb-3 text-gray-300">
+                            "I live in [Area]. Surprised you don't show up in local searches..."
+                        </div>
+                        <div class="hinglish-box">
+                            <span class="hinglish-label">HINGLISH</span>
+                            <p class="text-sm text-gray-200">"Sir main bhi [Area] mein rehta hoon. Main hairan tha ki local search mein aapka naam nahi aaya..."</p>
+                        </div>
+                    </div>
+
+                    <!-- Script 11 -->
+                    <div class="bg-dark-card border border-dark-border rounded-3xl p-6">
+                        <h4 class="font-bold text-lg mb-4 text-brand-100">11. Honest Opener</h4>
+                        <div class="text-sm bg-[#0a0a0a] p-4 rounded-xl border border-white/5 mb-3 text-gray-300">
+                            "This is a cold call. Give me 60 seconds. If useless, hang up..."
+                        </div>
+                        <div class="hinglish-box">
+                            <span class="hinglish-label">HINGLISH</span>
+                            <p class="text-sm text-gray-200">"Sir frankly yeh ek cold call hai. Mujhe 60 seconds dijiye, agar useful na lage toh aap phone kaat dena..."</p>
+                        </div>
+                    </div>
+
+                    <!-- Script 12 -->
+                    <div class="bg-dark-card border border-dark-border rounded-3xl p-6">
+                        <h4 class="font-bold text-lg mb-4 text-brand-100">12. Audit Offer Opener</h4>
+                        <div class="text-sm bg-[#0a0a0a] p-4 rounded-xl border border-white/5 mb-3 text-gray-300">
+                            "I do free 5-minute website audits. No sales pitch, just facts..."
+                        </div>
+                        <div class="hinglish-box">
+                            <span class="hinglish-label">HINGLISH</span>
+                            <p class="text-sm text-gray-200">"Sir main websites ka free 5-min audit karta hoon. Koi sales pitch nahi, sirf data aur facts share karunga..."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODULE 6: DISCOVERY QUESTIONS -->
+        <section id="m6" class="module-section">
+            <div class="cover-slide min-h-[calc(100vh-4rem)] lg:min-h-screen flex flex-col justify-center items-center bg-cover-gradient relative px-6 py-12 text-center w-full">
+                <div class="absolute top-8 right-8 text-white/20 text-4xl lg:text-5xl font-extrabold tracking-tighter">06</div>
+                <h3 class="text-brand-400 font-semibold uppercase tracking-widest text-xs md:text-sm mb-4">Module 06</h3>
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6">Discovery<br><span class="font-light italic text-white/80">Questions</span></h1>
+                <p class="text-lg md:text-xl lg:text-2xl text-dark-sec max-w-2xl font-light px-4">He who asks the questions controls the conversation.</p>
+            </div>
+
+            <div class="p-6 md:p-12 lg:p-20 max-w-5xl mx-auto w-full">
+                <div class="grid md:grid-cols-2 gap-12">
+                    
+                    <!-- Column 1 -->
+                    <div>
+                        <h3 class="text-xl md:text-2xl font-bold mb-6 text-white border-b border-brand-500 pb-2 inline-block">Business & Leads</h3>
+                        <ul class="space-y-4 text-sm text-gray-300">
+                            <li class="flex gap-3 items-start"><span class="text-brand-400 font-bold shrink-0">1.</span> <span>How do you currently get most of your clients?</span></li>
+                            <li class="flex gap-3 items-start"><span class="text-brand-400 font-bold shrink-0">2.</span> <span>How much are you spending monthly on portals (MagicBricks/Practo/JustDial)?</span></li>
+                            <li class="flex gap-3 items-start"><span class="text-brand-400 font-bold shrink-0">3.</span> <span>What is your average deal size or patient ticket size?</span></li>
+                            <li class="flex gap-3 items-start"><span class="text-brand-400 font-bold shrink-0">4.</span> <span>What is your biggest frustration with your current lead quality?</span></li>
+                            <li class="flex gap-3 items-start"><span class="text-brand-400 font-bold shrink-0">5.</span> <span>Who do you consider your biggest local competitor?</span></li>
+                            <li class="flex gap-3 items-start"><span class="text-brand-400 font-bold shrink-0">6.</span> <span>What percentage of your business comes from referrals?</span></li>
+                            <li class="flex gap-3 items-start"><span class="text-brand-400 font-bold shrink-0">7.</span> <span>What is your peak season for business?</span></li>
+                            <li class="flex gap-3 items-start"><span class="text-brand-400 font-bold shrink-0">8.</span> <span>How many leads do you need per month to hit your growth goals?</span></li>
+                            <li class="flex gap-3 items-start"><span class="text-brand-400 font-bold shrink-0">9.</span> <span>Are you losing deals because clients don't trust you quickly enough?</span></li>
+                            <li class="flex gap-3 items-start"><span class="text-brand-400 font-bold shrink-0">10.</span> <span>Where do you want your business to be 12 months from now?</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div>
+                        <h3 class="text-xl md:text-2xl font-bold mb-6 text-white border-b border-brand-500 pb-2 inline-block">Digital Presence</h3>
+                        <ul class="space-y-4 text-sm text-gray-300">
+                            <li class="flex gap-3 items-start"><span class="text-brand-400 font-bold shrink-0">11.</span> <span>Do you currently have a website?</span></li>
+                            <li class="flex gap-3 items-start"><span class="text-brand-400 font-bold shrink-0">12.</span> <span>Does your website actually generate inquiries for you?</span></li>
+                            <li class="flex gap-3 items-start"><span class="text-brand-400 font-bold shrink-0">13.</span> <span>Have you claimed and verified your Google Business Profile?</span></li>
+                            <li class="flex gap-3 items-start"><span class="text-brand-400 font-bold shrink-0">14.</span> <span>Are you actively collecting Google reviews from clients?</span></li>
+                            <li class="flex gap-3 items-start"><span class="text-brand-400 font-bold shrink-0">15.</span> <span>Have you ever hired an agency or freelancer before?</span></li>
+                            <li class="flex gap-3 items-start"><span class="text-brand-400 font-bold shrink-0">16.</span> <span>If yes, why did you stop working with them?</span></li>
+                            <li class="flex gap-3 items-start"><span class="text-brand-400 font-bold shrink-0">17.</span> <span>Have you ever searched for your own services on Google to see who shows up?</span></li>
+                            <li class="flex gap-3 items-start"><span class="text-brand-400 font-bold shrink-0">18.</span> <span>Are you using WhatsApp Business for client communication?</span></li>
+                            <li class="flex gap-3 items-start"><span class="text-brand-400 font-bold shrink-0">19.</span> <span>Can your current team handle 20-30 more inquiries a month?</span></li>
+                            <li class="flex gap-3 items-start"><span class="text-brand-400 font-bold shrink-0">20.</span> <span>Is anyone in your team responsible for digital updates right now?</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODULE 7: THE VALUE PITCH -->
+        <section id="m7" class="module-section">
+            <div class="cover-slide min-h-[calc(100vh-4rem)] lg:min-h-screen flex flex-col justify-center items-center bg-cover-gradient relative px-6 py-12 text-center w-full">
+                <div class="absolute top-8 right-8 text-white/20 text-4xl lg:text-5xl font-extrabold tracking-tighter">07</div>
+                <h3 class="text-brand-400 font-semibold uppercase tracking-widest text-xs md:text-sm mb-4">Module 07</h3>
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6">The Value<br><span class="font-light italic text-white/80">Pitch</span></h1>
+                <p class="text-lg md:text-xl lg:text-2xl text-dark-sec max-w-2xl font-light px-4">Bridge the gap between their pain and our solution.</p>
+            </div>
+
+            <div class="p-6 md:p-12 lg:p-20 max-w-5xl mx-auto w-full">
+                
+                <h2 class="text-xl md:text-2xl font-bold mb-8 border-b border-dark-border pb-4 text-center">The 4-Part Structure</h2>
+                <div class="flex flex-col lg:flex-row items-center justify-center gap-2 md:gap-4 mb-16 w-full max-w-full overflow-hidden px-2">
+                    <div class="bg-dark-card border border-dark-border p-3 md:p-4 rounded-xl text-center w-full md:w-48 shrink-0"><p class="text-status-danger font-bold text-sm md:text-base">1. Current Pain</p></div>
+                    <div class="flow-arrow rotate-90 lg:rotate-0 py-2 lg:py-0 shrink-0"><i class="fa-solid fa-arrow-right"></i></div>
+                    <div class="bg-dark-card border border-dark-border p-3 md:p-4 rounded-xl text-center w-full md:w-48 shrink-0"><p class="text-brand-400 font-bold text-sm md:text-base">2. Desired State</p></div>
+                    <div class="flow-arrow rotate-90 lg:rotate-0 py-2 lg:py-0 shrink-0"><i class="fa-solid fa-arrow-right"></i></div>
+                    <div class="bg-dark-card border border-dark-border p-3 md:p-4 rounded-xl text-center w-full md:w-48 shrink-0"><p class="text-white font-bold text-sm md:text-base">3. The Bridge (Us)</p></div>
+                    <div class="flow-arrow rotate-90 lg:rotate-0 py-2 lg:py-0 shrink-0"><i class="fa-solid fa-arrow-right"></i></div>
+                    <div class="bg-dark-card border border-dark-border p-3 md:p-4 rounded-xl text-center w-full md:w-48 shrink-0"><p class="text-status-success font-bold text-sm md:text-base">4. Proof</p></div>
+                </div>
+
+                <div class="space-y-6 md:space-y-8 mb-16">
+                    <div class="grid md:grid-cols-2 gap-4 md:gap-6 bg-dark-card border border-dark-border p-5 md:p-6 rounded-2xl">
+                        <div>
+                            <h3 class="font-bold text-lg mb-2 text-white"><i class="fa-solid fa-building text-brand-500 mr-2 shrink-0"></i> Real Estate Broker</h3>
+                            <p class="text-sm text-dark-sec">"MagicBricks charges ₹500 per listing. Your website = free listings + direct calls."</p>
+                        </div>
+                        <div class="hinglish-box mt-0 p-4">
+                            <span class="hinglish-label">HINGLISH</span>
+                            <p class="text-sm text-gray-200">"Sir portals har lead ka charge karte hain. Aapki apni website ka matlab hai zero listing fee aur direct buyers ka call."</p>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4 md:gap-6 bg-dark-card border border-dark-border p-5 md:p-6 rounded-2xl">
+                        <div>
+                            <h3 class="font-bold text-lg mb-2 text-white"><i class="fa-solid fa-user-doctor text-brand-500 mr-2 shrink-0"></i> Doctor / Clinic</h3>
+                            <p class="text-sm text-dark-sec">"Patient searches 'best dermatologist near me.' If you're not there, competitor gets them."</p>
+                        </div>
+                        <div class="hinglish-box mt-0 p-4">
+                            <span class="hinglish-label">HINGLISH</span>
+                            <p class="text-sm text-gray-200">"Jab patient 'near me' search karta hai, agar aap top 3 mein nahi hain, toh patient sidha competitor ke paas jata hai."</p>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4 md:gap-6 bg-dark-card border border-dark-border p-5 md:p-6 rounded-2xl">
+                        <div>
+                            <h3 class="font-bold text-lg mb-2 text-white"><i class="fa-solid fa-scale-balanced text-brand-500 mr-2 shrink-0"></i> CA / Lawyer</h3>
+                            <p class="text-sm text-dark-sec">"20 years experience but digital presence doesn't match. Gap = lost deals."</p>
+                        </div>
+                        <div class="hinglish-box mt-0 p-4">
+                            <span class="hinglish-label">HINGLISH</span>
+                            <p class="text-sm text-gray-200">"Sir aapka 20 saal ka experience hai par online presence basic hai. Client wahi gap dekh kar kisi aur ke paas chala jata hai."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="text-xl md:text-2xl font-bold mb-6 text-brand-400"><i class="fa-solid fa-calculator text-white mr-2 shrink-0"></i> ROI Calculator Conversation</h2>
+                <div class="flex flex-col gap-4 bg-[#050505] p-4 md:p-6 rounded-3xl border border-white/5 overflow-hidden">
+                    
+                    <!-- SE Avatar -->
+                    <div class="flex gap-3 md:gap-4">
+                        <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-brand-500/20 text-brand-400 flex items-center justify-center shrink-0 font-bold"><i class="fa-solid fa-headset"></i></div>
+                        <div class="bg-dark-card p-3 md:p-4 rounded-2xl rounded-tl-none border border-white/5 text-gray-200 w-full text-xs md:text-sm">
+                            <span class="font-bold text-brand-400 block mb-1">Sales Exec:</span>
+                            "Growth Pack is ₹18,999. If this brings you just 2 extra leads a month, and your average commission is ₹25,000, that's ₹6 Lakhs extra a year. Minimum 30x ROI."
+                        </div>
+                    </div>
+                    <!-- CX Avatar -->
+                    <div class="flex gap-3 md:gap-4 flex-row-reverse">
+                        <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-700 text-white flex items-center justify-center shrink-0 font-bold"><i class="fa-solid fa-user"></i></div>
+                        <div class="bg-gray-800 p-3 md:p-4 rounded-2xl rounded-tr-none border border-white/5 text-gray-200 w-full text-xs md:text-sm">
+                            <span class="font-bold text-gray-400 block mb-1">Customer:</span>
+                            "But will the leads actually come?"
+                        </div>
+                    </div>
+                    <!-- SE Avatar -->
+                    <div class="flex gap-3 md:gap-4">
+                        <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-brand-500/20 text-brand-400 flex items-center justify-center shrink-0 font-bold"><i class="fa-solid fa-headset"></i></div>
+                        <div class="bg-dark-card p-3 md:p-4 rounded-2xl rounded-tl-none border border-white/5 text-gray-200 w-full text-xs md:text-sm">
+                            <span class="font-bold text-brand-400 block mb-1">Sales Exec:</span>
+                            "I guarantee the system, not the lead. We put the engine in place: Website + GBP + WhatsApp integration. Our client Rajesh put this exact system in place and saw 3x inquiries in 60 days."
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- MODULE 8: OBJECTION HANDLING -->
+        <section id="m8" class="module-section">
+            <div class="cover-slide min-h-[calc(100vh-4rem)] lg:min-h-screen flex flex-col justify-center items-center bg-cover-gradient relative px-6 py-12 text-center w-full">
+                <div class="absolute top-8 right-8 text-white/20 text-4xl lg:text-5xl font-extrabold tracking-tighter">08</div>
+                <h3 class="text-brand-400 font-semibold uppercase tracking-widest text-xs md:text-sm mb-4">Module 08</h3>
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6">Objection<br><span class="font-light italic text-white/80">Handling</span></h1>
+                <p class="text-lg md:text-xl lg:text-2xl text-dark-sec max-w-2xl font-light px-4">12 real conversations. Don't freeze, follow the script.</p>
+            </div>
+
+            <div class="p-6 md:p-12 lg:p-20 max-w-5xl mx-auto w-full grid md:grid-cols-2 gap-6 md:gap-8">
+                
+                <!-- Objection 1 -->
+                <div class="flex flex-col gap-3 bg-[#050505] p-4 md:p-5 rounded-3xl border border-white/5 w-full">
+                    <h4 class="text-white font-bold mb-2 border-b border-white/10 pb-2">1. "Not Interested"</h4>
+                    <div class="flex gap-2.5 md:gap-3">
+                        <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-gray-700 text-xs flex items-center justify-center shrink-0"><i class="fa-solid fa-user"></i></div>
+                        <div class="bg-gray-800 p-2.5 md:p-3 rounded-xl rounded-tl-none text-gray-300 w-full text-xs">"Nahi, abhi interest nahi hai."</div>
+                    </div>
+                    <div class="flex gap-2.5 md:gap-3 flex-row-reverse">
+                        <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-brand-500/20 text-brand-400 text-xs flex items-center justify-center shrink-0"><i class="fa-solid fa-headset"></i></div>
+                        <div class="bg-dark-card border border-brand-500/20 p-2.5 md:p-3 rounded-xl rounded-tr-none text-white w-full text-xs">"Kya 'not interested' kyunki digital kaam nahi karega, ya pehle kisi ne dhokha diya?"</div>
+                    </div>
+                    <div class="flex gap-2.5 md:gap-3">
+                        <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-gray-700 text-xs flex items-center justify-center shrink-0"><i class="fa-solid fa-user"></i></div>
+                        <div class="bg-gray-800 p-2.5 md:p-3 rounded-xl rounded-tl-none text-gray-300 w-full text-xs">"Pehle try kiya, kuch nahi hua."</div>
+                    </div>
+                    <div class="flex gap-2.5 md:gap-3 flex-row-reverse">
+                        <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-brand-500/20 text-brand-400 text-xs flex items-center justify-center shrink-0"><i class="fa-solid fa-headset"></i></div>
+                        <div class="bg-dark-card border border-brand-500/20 p-2.5 md:p-3 rounded-xl rounded-tr-none text-white w-full text-xs">"Toh problem digital nahi tha, execution tha. Bas 5 minutes dijye, main dikhata hoon kyun fail hua."</div>
+                    </div>
+                </div>
+
+                <!-- Objection 2 -->
+                <div class="flex flex-col gap-3 bg-[#050505] p-4 md:p-5 rounded-3xl border border-white/5 w-full">
+                    <h4 class="text-white font-bold mb-2 border-b border-white/10 pb-2">2. "Too Expensive"</h4>
+                    <div class="flex gap-2.5 md:gap-3">
+                        <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-gray-700 text-xs flex items-center justify-center shrink-0"><i class="fa-solid fa-user"></i></div>
+                        <div class="bg-gray-800 p-2.5 md:p-3 rounded-xl rounded-tl-none text-gray-300 w-full text-xs">"Bahut mehenga hai."</div>
+                    </div>
+                    <div class="flex gap-2.5 md:gap-3 flex-row-reverse">
+                        <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-brand-500/20 text-brand-400 text-xs flex items-center justify-center shrink-0"><i class="fa-solid fa-headset"></i></div>
+                        <div class="bg-dark-card border border-brand-500/20 p-2.5 md:p-3 rounded-xl rounded-tr-none text-white w-full text-xs">"Kis comparison mein? MagicBricks ₹20K monthly leta hai. Website ₹18,999 one-time hai. 3 saal chalti hai. Long term mein ye portal se sasta aur profitable hai."</div>
+                    </div>
+                </div>
+
+                <!-- Objection 3 -->
+                <div class="flex flex-col gap-3 bg-[#050505] p-4 md:p-5 rounded-3xl border border-white/5 w-full">
+                    <h4 class="text-white font-bold mb-2 border-b border-white/10 pb-2">3. "Already Have Website"</h4>
+                    <div class="flex gap-2.5 md:gap-3">
+                        <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-gray-700 text-xs flex items-center justify-center shrink-0"><i class="fa-solid fa-user"></i></div>
+                        <div class="bg-gray-800 p-2.5 md:p-3 rounded-xl rounded-tl-none text-gray-300 w-full text-xs">"Website already bani hui hai."</div>
+                    </div>
+                    <div class="flex gap-2.5 md:gap-3 flex-row-reverse">
+                        <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-brand-500/20 text-brand-400 text-xs flex items-center justify-center shrink-0"><i class="fa-solid fa-headset"></i></div>
+                        <div class="bg-dark-card border border-brand-500/20 p-2.5 md:p-3 rounded-xl rounded-tr-none text-white w-full text-xs">"Sir website kaam karne se fayda deti hai, sirf hone se nahi. Kya direct leads aa rahe hain us se?"</div>
+                    </div>
+                    <div class="flex gap-2.5 md:gap-3">
+                        <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-gray-700 text-xs flex items-center justify-center shrink-0"><i class="fa-solid fa-user"></i></div>
+                        <div class="bg-gray-800 p-2.5 md:p-3 rounded-xl rounded-tl-none text-gray-300 w-full text-xs">"Nahi, bas information ke liye banayi thi."</div>
+                    </div>
+                    <div class="flex gap-2.5 md:gap-3 flex-row-reverse">
+                        <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-brand-500/20 text-brand-400 text-xs flex items-center justify-center shrink-0"><i class="fa-solid fa-headset"></i></div>
+                        <div class="bg-dark-card border border-brand-500/20 p-2.5 md:p-3 rounded-xl rounded-tr-none text-white w-full text-xs">"Toh woh online brochure hai. Main usey lead-generation machine banana chahunga."</div>
+                    </div>
+                </div>
+
+                <!-- Objection 4 -->
+                <div class="flex flex-col gap-3 bg-[#050505] p-4 md:p-5 rounded-3xl border border-white/5 w-full">
+                    <h4 class="text-white font-bold mb-2 border-b border-white/10 pb-2">4. "Already Have Developer"</h4>
+                    <div class="flex gap-2.5 md:gap-3">
+                        <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-gray-700 text-xs flex items-center justify-center shrink-0"><i class="fa-solid fa-user"></i></div>
+                        <div class="bg-gray-800 p-2.5 md:p-3 rounded-xl rounded-tl-none text-gray-300 w-full text-xs">"Mera developer already hai."</div>
+                    </div>
+                    <div class="flex gap-2.5 md:gap-3 flex-row-reverse">
+                        <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-brand-500/20 text-brand-400 text-xs flex items-center justify-center shrink-0"><i class="fa-solid fa-headset"></i></div>
+                        <div class="bg-dark-card border border-brand-500/20 p-2.5 md:p-3 rounded-xl rounded-tr-none text-white w-full text-xs">"Great. Last update mein kitna time laga tha? Kya woh SEO aur GBP bhi handle karte hain?"</div>
+                    </div>
+                    <div class="flex gap-2.5 md:gap-3">
+                        <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-gray-700 text-xs flex items-center justify-center shrink-0"><i class="fa-solid fa-user"></i></div>
+                        <div class="bg-gray-800 p-2.5 md:p-3 rounded-xl rounded-tl-none text-gray-300 w-full text-xs">"Nahi bas design karte hain."</div>
+                    </div>
+                    <div class="flex gap-2.5 md:gap-3 flex-row-reverse">
+                        <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-brand-500/20 text-brand-400 text-xs flex items-center justify-center shrink-0"><i class="fa-solid fa-headset"></i></div>
+                        <div class="bg-dark-card border border-brand-500/20 p-2.5 md:p-3 rounded-xl rounded-tr-none text-white w-full text-xs">"Toh gap yahin hai. Car hai, driver nahi. Main driver, GPS, aur fuel teeno dunga."</div>
+                    </div>
+                </div>
+
+                <!-- Objection 5 -->
+                <div class="flex flex-col gap-3 bg-[#050505] p-4 md:p-5 rounded-3xl border border-white/5 w-full">
+                    <h4 class="text-white font-bold mb-2 border-b border-white/10 pb-2">5. "Send WhatsApp"</h4>
+                    <div class="flex gap-2.5 md:gap-3">
+                        <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-gray-700 text-xs flex items-center justify-center shrink-0"><i class="fa-solid fa-user"></i></div>
+                        <div class="bg-gray-800 p-2.5 md:p-3 rounded-xl rounded-tl-none text-gray-300 w-full text-xs">"Aap details WhatsApp kar do."</div>
+                    </div>
+                    <div class="flex gap-2.5 md:gap-3 flex-row-reverse">
+                        <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-brand-500/20 text-brand-400 text-xs flex items-center justify-center shrink-0"><i class="fa-solid fa-headset"></i></div>
+                        <div class="bg-dark-card border border-brand-500/20 p-2.5 md:p-3 rounded-xl rounded-tr-none text-white w-full text-xs">"Zaroor bhej dunga. Lekin sirf details padh ke decision nahi banta. Main audit ka screenshot bhej raha hoon. Aap dekhiye, phir hum detail call karte hain."</div>
+                    </div>
+                </div>
+
+                <!-- Objection 6 -->
+                <div class="flex flex-col gap-3 bg-[#050505] p-4 md:p-5 rounded-3xl border border-white/5 w-full">
+                    <h4 class="text-white font-bold mb-2 border-b border-white/10 pb-2">6. "Call Later"</h4>
+                    <div class="flex gap-2.5 md:gap-3">
+                        <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-gray-700 text-xs flex items-center justify-center shrink-0"><i class="fa-solid fa-user"></i></div>
+                        <div class="bg-gray-800 p-2.5 md:p-3 rounded-xl rounded-tl-none text-gray-300 w-full text-xs">"Abhi busy hoon, baad mein call karna."</div>
+                    </div>
+                    <div class="flex gap-2.5 md:gap-3 flex-row-reverse">
+                        <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-brand-500/20 text-brand-400 text-xs flex items-center justify-center shrink-0"><i class="fa-solid fa-headset"></i></div>
+                        <div class="bg-dark-card border border-brand-500/20 p-2.5 md:p-3 rounded-xl rounded-tr-none text-white w-full text-xs">"No problem. 'Baad mein' kab suit karega? Tuesday 11 AM ya Thursday 4 PM? Bas 10 minutes chahiye hongi."</div>
+                    </div>
+                </div>
+
+                <!-- Objection 7 -->
+                <div class="flex flex-col gap-3 bg-[#050505] p-4 md:p-5 rounded-3xl border border-white/5 w-full">
+                    <h4 class="text-white font-bold mb-2 border-b border-white/10 pb-2">7. "Need Approval"</h4>
+                    <div class="flex gap-2.5 md:gap-3">
+                        <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-gray-700 text-xs flex items-center justify-center shrink-0"><i class="fa-solid fa-user"></i></div>
+                        <div class="bg-gray-800 p-2.5 md:p-3 rounded-xl rounded-tl-none text-gray-300 w-full text-xs">"Partner se pooch ke batata hoon."</div>
+                    </div>
+                    <div class="flex gap-2.5 md:gap-3 flex-row-reverse">
+                        <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-brand-500/20 text-brand-400 text-xs flex items-center justify-center shrink-0"><i class="fa-solid fa-headset"></i></div>
+                        <div class="bg-dark-card border border-brand-500/20 p-2.5 md:p-3 rounded-xl rounded-tr-none text-white w-full text-xs">"Jab unhe batayenge, woh puchenge 'kitne ka hai?' aur value miss ho jayegi. Better hai main aap dono ke saath 15-min zoom call kar loon."</div>
+                    </div>
+                </div>
+
+                <!-- Objection 8 -->
+                <div class="flex flex-col gap-3 bg-[#050505] p-4 md:p-5 rounded-3xl border border-white/5 w-full">
+                    <h4 class="text-white font-bold mb-2 border-b border-white/10 pb-2">8. "Need Discount"</h4>
+                    <div class="flex gap-2.5 md:gap-3">
+                        <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-gray-700 text-xs flex items-center justify-center shrink-0"><i class="fa-solid fa-user"></i></div>
+                        <div class="bg-gray-800 p-2.5 md:p-3 rounded-xl rounded-tl-none text-gray-300 w-full text-xs">"Kuch discount kar do yaar."</div>
+                    </div>
+                    <div class="flex gap-2.5 md:gap-3 flex-row-reverse">
+                        <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-brand-500/20 text-brand-400 text-xs flex items-center justify-center shrink-0"><i class="fa-solid fa-headset"></i></div>
+                        <div class="bg-dark-card border border-brand-500/20 p-2.5 md:p-3 rounded-xl rounded-tr-none text-white w-full text-xs">"Main cheap vendor nahi hoon sir. Lekin ek option hai — ya toh ek service hata dein package se, ya payment terms 30-30-40 kar dun?"</div>
+                    </div>
+                </div>
+
+                <!-- Objection 9 -->
+                <div class="flex flex-col gap-3 bg-[#050505] p-4 md:p-5 rounded-3xl border border-white/5 w-full">
+                    <h4 class="text-white font-bold mb-2 border-b border-white/10 pb-2">9. "Using Portals"</h4>
+                    <div class="flex gap-2.5 md:gap-3">
+                        <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-gray-700 text-xs flex items-center justify-center shrink-0"><i class="fa-solid fa-user"></i></div>
+                        <div class="bg-gray-800 p-2.5 md:p-3 rounded-xl rounded-tl-none text-gray-300 w-full text-xs">"MagicBricks se kaam chal raha hai acha khasa."</div>
+                    </div>
+                    <div class="flex gap-2.5 md:gap-3 flex-row-reverse">
+                        <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-brand-500/20 text-brand-400 text-xs flex items-center justify-center shrink-0"><i class="fa-solid fa-headset"></i></div>
+                        <div class="bg-dark-card border border-brand-500/20 p-2.5 md:p-3 rounded-xl rounded-tr-none text-white w-full text-xs">"Woh aapke landlord hain, client nahi. Kal rent badha denge ya same lead 5 logo ko denge. Main aapka apna digital ghar banana sikha raha hoon."</div>
+                    </div>
+                </div>
+
+                <!-- Objection 10 -->
+                <div class="flex flex-col gap-3 bg-[#050505] p-4 md:p-5 rounded-3xl border border-white/5 w-full">
+                    <h4 class="text-white font-bold mb-2 border-b border-white/10 pb-2">10. "Referrals Are Enough"</h4>
+                    <div class="flex gap-2.5 md:gap-3">
+                        <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-gray-700 text-xs flex items-center justify-center shrink-0"><i class="fa-solid fa-user"></i></div>
+                        <div class="bg-gray-800 p-2.5 md:p-3 rounded-xl rounded-tl-none text-gray-300 w-full text-xs">"Hamara sara kaam referrals se aata hai."</div>
+                    </div>
+                    <div class="flex gap-2.5 md:gap-3 flex-row-reverse">
+                        <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-brand-500/20 text-brand-400 text-xs flex items-center justify-center shrink-0"><i class="fa-solid fa-headset"></i></div>
+                        <div class="bg-dark-card border border-brand-500/20 p-2.5 md:p-3 rounded-xl rounded-tr-none text-white w-full text-xs">"Referrals gold hain lekin unpredictable hain. Digital ek predictable pipeline banata hai. Plus, referral aane ke baad bhi log Google pe check karte hain trust ke liye."</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODULE 9: CLOSING TECHNIQUES -->
+        <section id="m9" class="module-section">
+            <div class="cover-slide min-h-[calc(100vh-4rem)] lg:min-h-screen flex flex-col justify-center items-center bg-cover-gradient relative px-6 py-12 text-center w-full">
+                <div class="absolute top-8 right-8 text-white/20 text-4xl lg:text-5xl font-extrabold tracking-tighter">09</div>
+                <h3 class="text-brand-400 font-semibold uppercase tracking-widest text-xs md:text-sm mb-4">Module 09</h3>
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6">Closing<br><span class="font-light italic text-white/80">Techniques</span></h1>
+                <p class="text-lg md:text-xl lg:text-2xl text-dark-sec max-w-2xl font-light px-4">15 ways to get the "Yes".</p>
+            </div>
+
+            <div class="p-6 md:p-12 lg:p-20 max-w-5xl mx-auto w-full">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                    
+                    <div class="bg-dark-card p-5 rounded-2xl border border-dark-border glow-card">
+                        <p class="text-brand-400 font-bold text-sm mb-2">1. Alternative Close</p>
+                        <p class="text-sm text-gray-300 italic break-words">"Tuesday 11 AM ya Thursday 4 PM?"</p>
+                    </div>
+                    <div class="bg-dark-card p-5 rounded-2xl border border-dark-border glow-card">
+                        <p class="text-brand-400 font-bold text-sm mb-2">2. Assumptive Close</p>
+                        <p class="text-sm text-gray-300 italic break-words">"Main aapka domain book kar dun abhi?"</p>
+                    </div>
+                    <div class="bg-dark-card p-5 rounded-2xl border border-dark-border glow-card">
+                        <p class="text-brand-400 font-bold text-sm mb-2">3. Puppy Dog Close</p>
+                        <p class="text-sm text-gray-300 italic break-words">"Ek week trial lete hain? GBP optimise karke dikhata hoon."</p>
+                    </div>
+                    <div class="bg-dark-card p-5 rounded-2xl border border-dark-border glow-card">
+                        <p class="text-brand-400 font-bold text-sm mb-2">4. Summary Close</p>
+                        <p class="text-sm text-gray-300 italic break-words">"Toh 10-page site + GBP + WA. ₹18,999. Proposal bhej dun?"</p>
+                    </div>
+                    <div class="bg-dark-card p-5 rounded-2xl border border-dark-border glow-card">
+                        <p class="text-brand-400 font-bold text-sm mb-2">5. Urgency Close</p>
+                        <p class="text-sm text-gray-300 italic break-words">"Is month sirf 2 projects le rahe hain. Confirm karein?"</p>
+                    </div>
+                    <div class="bg-dark-card p-5 rounded-2xl border border-dark-border glow-card">
+                        <p class="text-brand-400 font-bold text-sm mb-2">6. Sharp Angle Close</p>
+                        <p class="text-sm text-gray-300 italic break-words">"Agar payment 30-30-40 kar dun, aaj sign karoge?"</p>
+                    </div>
+                    <div class="bg-dark-card p-5 rounded-2xl border border-dark-border glow-card">
+                        <p class="text-brand-400 font-bold text-sm mb-2">7. Ben Franklin Close</p>
+                        <p class="text-sm text-gray-300 italic break-words">"Pros vs Cons likhte hain. Pros zyada hain na?"</p>
+                    </div>
+                    <div class="bg-dark-card p-5 rounded-2xl border border-dark-border glow-card">
+                        <p class="text-brand-400 font-bold text-sm mb-2">8. Testimonial Close</p>
+                        <p class="text-sm text-gray-300 italic break-words">"[Client] ki leads 3x ho gayi thi. Result sunna chahoge?"</p>
+                    </div>
+                    <div class="bg-dark-card p-5 rounded-2xl border border-dark-border glow-card">
+                        <p class="text-brand-400 font-bold text-sm mb-2">9. Calculator Close</p>
+                        <p class="text-sm text-gray-300 italic break-words">"₹18,999 ÷ 365 = ₹52/day. Ek lead bhi aayi toh cover."</p>
+                    </div>
+                    <div class="bg-brand-900/30 p-5 rounded-2xl border border-brand-500/50 glow-card relative">
+                        <div class="absolute -top-2 right-2 bg-brand-500 text-[10px] font-bold px-2 rounded text-white tracking-widest">POWERFUL</div>
+                        <p class="text-white font-bold text-sm mb-2">10. Silence Close</p>
+                        <p class="text-sm text-brand-200 italic break-words">"Should we proceed?" &rarr; <span class="font-bold text-white">Stay silent. Count to 10.</span></p>
+                    </div>
+                    <div class="bg-dark-card p-5 rounded-2xl border border-dark-border glow-card">
+                        <p class="text-brand-400 font-bold text-sm mb-2">11. Either/Or Close</p>
+                        <p class="text-sm text-gray-300 italic break-words">"Growth ya Authority — kaunsa package final karein?"</p>
+                    </div>
+                    <div class="bg-dark-card p-5 rounded-2xl border border-dark-border glow-card">
+                        <p class="text-brand-400 font-bold text-sm mb-2">12. Reverse Close</p>
+                        <p class="text-sm text-gray-300 italic break-words">"Agar nahi karte, competitor aage jayega. Comfortable hain?"</p>
+                    </div>
+                    <div class="bg-dark-card p-5 rounded-2xl border border-dark-border glow-card">
+                        <p class="text-brand-400 font-bold text-sm mb-2">13. Walk-Away Close</p>
+                        <p class="text-sm text-gray-300 italic break-words">"Shayad abhi time nahi. Jab ready honge, call karna."</p>
+                    </div>
+                    <div class="bg-dark-card p-5 rounded-2xl border border-dark-border glow-card">
+                        <p class="text-brand-400 font-bold text-sm mb-2">14. Question Close</p>
+                        <p class="text-sm text-gray-300 italic break-words">"Aapko kya chahiye taaki aaj decision final ho jaye?"</p>
+                    </div>
+                    <div class="bg-dark-card p-5 rounded-2xl border border-dark-border glow-card">
+                        <p class="text-brand-400 font-bold text-sm mb-2">15. Direct Close</p>
+                        <p class="text-sm text-gray-300 italic break-words">"Bas form sign karna hai aur 50% advance. Ready hain?"</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- MODULE 10: WHATSAPP SYSTEM -->
+        <section id="m10" class="module-section">
+            <div class="cover-slide min-h-[calc(100vh-4rem)] lg:min-h-screen flex flex-col justify-center items-center bg-cover-gradient relative px-6 py-12 text-center w-full">
+                <div class="absolute top-8 right-8 text-white/20 text-4xl lg:text-5xl font-extrabold tracking-tighter">10</div>
+                <h3 class="text-brand-400 font-semibold uppercase tracking-widest text-xs md:text-sm mb-4">Module 10</h3>
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6">WhatsApp<br><span class="font-light italic text-white/80">Follow-Up System</span></h1>
+                <p class="text-lg md:text-xl lg:text-2xl text-dark-sec max-w-2xl font-light px-4">Persistence without being annoying.</p>
+            </div>
+
+            <div class="p-6 md:p-12 lg:p-20 max-w-5xl mx-auto w-full">
+                
+                <h2 class="text-xl md:text-2xl font-bold mb-6 text-brand-400 flex items-center gap-2"><i class="fa-brands fa-whatsapp text-green-500 shrink-0"></i> The 6-Touch Sequence</h2>
+                <div class="flex flex-col gap-4 mb-16">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 md:gap-4 bg-dark-card p-4 rounded-xl border border-dark-border">
+                        <div class="bg-dark-bg text-dark-sec font-mono font-bold px-3 py-1 rounded text-sm shrink-0">Day 1</div>
+                        <div class="flex-1 text-sm md:text-base"><span class="font-bold text-white">Immediate Audit Screenshot</span> &mdash; Visual proof of the gap.</div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 md:gap-4 bg-dark-card p-4 rounded-xl border border-dark-border">
+                        <div class="bg-dark-bg text-dark-sec font-mono font-bold px-3 py-1 rounded text-sm shrink-0">Day 2</div>
+                        <div class="flex-1 text-sm md:text-base"><span class="font-bold text-white">Mobile Stat</span> &mdash; Educate (68% of local searches happen on mobile).</div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 md:gap-4 bg-dark-card p-4 rounded-xl border border-dark-border">
+                        <div class="bg-dark-bg text-dark-sec font-mono font-bold px-3 py-1 rounded text-sm shrink-0">Day 3</div>
+                        <div class="flex-1 text-sm md:text-base"><span class="font-bold text-white">Social Proof</span> &mdash; Share a quick client win or ROI story.</div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 md:gap-4 bg-dark-card p-4 rounded-xl border border-dark-border">
+                        <div class="bg-dark-bg text-dark-sec font-mono font-bold px-3 py-1 rounded text-sm shrink-0">Day 5</div>
+                        <div class="flex-1 text-sm md:text-base"><span class="font-bold text-white">Urgency</span> &mdash; "Only 1 founder slot remaining this month."</div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 md:gap-4 bg-dark-card p-4 rounded-xl border border-dark-border">
+                        <div class="bg-dark-bg text-dark-sec font-mono font-bold px-3 py-1 rounded text-sm shrink-0">Day 7</div>
+                        <div class="flex-1 text-sm md:text-base"><span class="font-bold text-white">Honest Check</span> &mdash; "Say 'not now' and I'll pause messaging you."</div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 md:gap-4 bg-dark-card p-4 rounded-xl border border-dark-border">
+                        <div class="bg-dark-bg text-dark-sec font-mono font-bold px-3 py-1 rounded text-sm shrink-0">Day 14</div>
+                        <div class="flex-1 text-sm md:text-base"><span class="font-bold text-white">Final Value</span> &mdash; Offer the free GBP checklist.</div>
+                    </div>
+                </div>
+
+                <div class="bg-[#050505] border border-white/10 rounded-3xl p-6 md:p-8 w-full">
+                    <h3 class="font-bold text-lg md:text-xl mb-4 text-white">20 Ready-To-Use Templates (Internal Library)</h3>
+                    <p class="text-sm text-dark-sec mb-6">Store these in your WhatsApp Business quick replies.</p>
+                    <div class="flex flex-wrap gap-2 text-[10px] sm:text-xs font-mono text-brand-300">
+                        <span class="bg-brand-900/40 px-2 py-1 rounded break-all">/post-call-audit</span>
+                        <span class="bg-brand-900/40 px-2 py-1 rounded break-all">/competitor-intel</span>
+                        <span class="bg-brand-900/40 px-2 py-1 rounded break-all">/proposal-followup</span>
+                        <span class="bg-brand-900/40 px-2 py-1 rounded break-all">/reminder</span>
+                        <span class="bg-brand-900/40 px-2 py-1 rounded break-all">/mobile-stat</span>
+                        <span class="bg-brand-900/40 px-2 py-1 rounded break-all">/gbp-unclaimed</span>
+                        <span class="bg-brand-900/40 px-2 py-1 rounded break-all">/seasonal-prep</span>
+                        <span class="bg-brand-900/40 px-2 py-1 rounded break-all">/mockup-tease</span>
+                        <span class="bg-brand-900/40 px-2 py-1 rounded break-all">/whatsapp-api</span>
+                        <span class="bg-brand-900/40 px-2 py-1 rounded break-all">/partner-discussion</span>
+                        <span class="bg-brand-900/40 px-2 py-1 rounded break-all">/search-report</span>
+                        <span class="bg-brand-900/40 px-2 py-1 rounded break-all">/video-testimonial</span>
+                        <span class="bg-brand-900/40 px-2 py-1 rounded break-all">/speed-issue</span>
+                        <span class="bg-brand-900/40 px-2 py-1 rounded break-all">/competitor-post</span>
+                        <span class="bg-brand-900/40 px-2 py-1 rounded break-all">/rera-update</span>
+                        <span class="bg-brand-900/40 px-2 py-1 rounded break-all">/nri-season</span>
+                        <span class="bg-brand-900/40 px-2 py-1 rounded break-all">/free-checklist</span>
+                        <span class="bg-brand-900/40 px-2 py-1 rounded break-all">/instagram-sync</span>
+                        <span class="bg-brand-900/40 px-2 py-1 rounded break-all">/tax-season</span>
+                        <span class="bg-brand-900/40 px-2 py-1 rounded break-all">/local-radius</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- MODULE 11: DAILY SOP -->
+        <section id="m11" class="module-section">
+            <div class="cover-slide min-h-[calc(100vh-4rem)] lg:min-h-screen flex flex-col justify-center items-center bg-cover-gradient relative px-6 py-12 text-center w-full">
+                <div class="absolute top-8 right-8 text-white/20 text-4xl lg:text-5xl font-extrabold tracking-tighter">11</div>
+                <h3 class="text-brand-400 font-semibold uppercase tracking-widest text-xs md:text-sm mb-4">Module 11</h3>
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6">Daily <span class="font-light italic text-white/80">SOP</span></h1>
+                <p class="text-lg md:text-xl lg:text-2xl text-dark-sec max-w-2xl font-light px-4">Consistency over intensity.</p>
+            </div>
+
+            <div class="p-6 md:p-12 lg:p-20 max-w-5xl mx-auto w-full">
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                    <div class="bg-dark-card border border-dark-border p-6 rounded-2xl w-full">
+                        <div class="text-brand-400 text-3xl mb-4"><i class="fa-regular fa-sun"></i></div>
+                        <h4 class="font-bold text-white mb-2">Morning Routine (9-10 AM)</h4>
+                        <ul class="text-sm text-dark-sec space-y-2">
+                            <li>• Check CRM & pipeline</li>
+                            <li>• Reply to WhatsApp messages</li>
+                            <li>• Prep today's call list</li>
+                            <li>• Research top 5 prospects</li>
+                            <li>• Set daily targets</li>
+                        </ul>
+                    </div>
+                    <div class="bg-dark-card border border-brand-500/50 shadow-[0_0_15px_rgba(37,99,235,0.15)] p-6 rounded-2xl relative w-full">
+                        <div class="absolute -top-3 right-4 bg-brand-600 text-[10px] font-bold px-2 py-1 rounded text-white tracking-widest">MONEY TIME</div>
+                        <div class="text-brand-500 text-3xl mb-4"><i class="fa-solid fa-fire"></i></div>
+                        <h4 class="font-bold text-white mb-2">Core Hours (10 AM-5 PM)</h4>
+                        <ul class="text-sm text-dark-sec space-y-2">
+                            <li>• 25-30 Dials minimum</li>
+                            <li>• 3-5 Meaningful conversations</li>
+                            <li>• 15-20 WhatsApp follow-ups</li>
+                            <li>• Live CRM updates</li>
+                            <li>• Send proposals within 2 hours</li>
+                        </ul>
+                    </div>
+                    <div class="bg-dark-card border border-dark-border p-6 rounded-2xl w-full">
+                        <div class="text-brand-400 text-3xl mb-4"><i class="fa-solid fa-moon"></i></div>
+                        <h4 class="font-bold text-white mb-2">Evening (5-6 PM)</h4>
+                        <ul class="text-sm text-dark-sec space-y-2">
+                            <li>• Log all calls & notes</li>
+                            <li>• Schedule tomorrow's tasks</li>
+                            <li>• Send daily report to founder</li>
+                            <li>• Review 1 objection faced</li>
+                            <li>• Practice 1 script aloud</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-6 md:gap-8 w-full">
+                    <div class="bg-[#1a0505] border border-status-danger/30 p-6 md:p-8 rounded-3xl w-full">
+                        <h3 class="font-bold text-status-danger text-lg md:text-xl mb-4 flex items-center gap-2"><i class="fa-solid fa-ban shrink-0"></i> NEVER DO LIST</h3>
+                        <ul class="text-sm text-gray-300 space-y-3">
+                            <li class="flex items-start"><span class="text-status-danger mr-2 shrink-0">✗</span> Call without prior Google research.</li>
+                            <li class="flex items-start"><span class="text-status-danger mr-2 shrink-0">✗</span> Promise technical features we don't build.</li>
+                            <li class="flex items-start"><span class="text-status-danger mr-2 shrink-0">✗</span> Give discounts without founder approval.</li>
+                            <li class="flex items-start"><span class="text-status-danger mr-2 shrink-0">✗</span> Bad-mouth their current portal or competitors.</li>
+                            <li class="flex items-start"><span class="text-status-danger mr-2 shrink-0">✗</span> Skip CRM data entry.</li>
+                            <li class="flex items-start"><span class="text-status-danger mr-2 shrink-0">✗</span> Ghost a "maybe" prospect. Follow up until Yes/No.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-brand-900/20 border border-brand-500/30 p-6 md:p-8 rounded-3xl flex flex-col justify-center w-full">
+                        <h3 class="font-bold text-brand-400 text-lg md:text-xl mb-6 text-center uppercase tracking-widest">6 Daily KPIs</h3>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-3 md:gap-4 text-center">
+                            <div class="bg-[#050505] p-2 md:p-3 rounded-lg border border-white/5"><p class="text-xl md:text-2xl font-bold text-white">30</p><p class="text-[10px] md:text-xs text-dark-sec uppercase">Calls</p></div>
+                            <div class="bg-[#050505] p-2 md:p-3 rounded-lg border border-white/5"><p class="text-xl md:text-2xl font-bold text-white">5</p><p class="text-[10px] md:text-xs text-dark-sec uppercase">Convos</p></div>
+                            <div class="bg-[#050505] p-2 md:p-3 rounded-lg border border-white/5"><p class="text-xl md:text-2xl font-bold text-brand-400">2</p><p class="text-[10px] md:text-xs text-brand-200 uppercase">Meetings</p></div>
+                            <div class="bg-[#050505] p-2 md:p-3 rounded-lg border border-white/5"><p class="text-xl md:text-2xl font-bold text-white">20</p><p class="text-[10px] md:text-xs text-dark-sec uppercase break-words">WA Followups</p></div>
+                            <div class="bg-[#050505] p-2 md:p-3 rounded-lg border border-white/5"><p class="text-xl md:text-2xl font-bold text-white">3</p><p class="text-[10px] md:text-xs text-dark-sec uppercase">Props/Wk</p></div>
+                            <div class="bg-[#050505] p-2 md:p-3 rounded-lg border border-brand-500/50 shadow-[0_0_10px_rgba(37,99,235,0.2)]"><p class="text-xl md:text-2xl font-bold text-brand-400">1</p><p class="text-[10px] md:text-xs text-white uppercase font-bold">Close/Wk</p></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- MODULE 12: ROLE PLAY CONVERSATIONS -->
+        <section id="m12" class="module-section">
+            <div class="cover-slide min-h-[calc(100vh-4rem)] lg:min-h-screen flex flex-col justify-center items-center bg-cover-gradient relative px-6 py-12 text-center w-full">
+                <div class="absolute top-8 right-8 text-white/20 text-4xl lg:text-5xl font-extrabold tracking-tighter">12</div>
+                <h3 class="text-brand-400 font-semibold uppercase tracking-widest text-xs md:text-sm mb-4">Module 12</h3>
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6">Role Play<br><span class="font-light italic text-white/80">Conversations</span></h1>
+                <p class="text-lg md:text-xl lg:text-2xl text-dark-sec max-w-2xl font-light px-4">Read these out loud with a partner daily.</p>
+            </div>
+
+            <div class="p-6 md:p-12 lg:p-20 max-w-4xl mx-auto space-y-12 w-full">
+                
+                <!-- Role Play 1 -->
+                <div class="w-full">
+                    <h3 class="text-lg md:text-xl font-bold mb-4 text-white border-l-4 border-brand-500 pl-3 md:pl-4">Role Play 1: Real Estate Broker (Cold to Meeting)</h3>
+                    <div class="flex flex-col gap-4 bg-[#050505] p-4 md:p-6 rounded-3xl border border-white/5 w-full">
+                        <div class="flex gap-3 md:gap-4">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-brand-500/20 text-brand-400 flex items-center justify-center shrink-0 font-bold"><i class="fa-solid fa-headset"></i></div>
+                            <div class="bg-dark-card p-3 md:p-4 rounded-2xl rounded-tl-none border border-white/5 text-gray-200 w-full text-sm">"Hello Amit sir, Harshdeep here. Main dekh raha tha aap MagicBricks pe premium properties list karte hain Gurgaon mein, right?"</div>
+                        </div>
+                        <div class="flex gap-3 md:gap-4 flex-row-reverse">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-700 text-white flex items-center justify-center shrink-0 font-bold"><i class="fa-solid fa-user"></i></div>
+                            <div class="bg-gray-800 p-3 md:p-4 rounded-2xl rounded-tr-none border border-white/5 text-gray-200 w-full text-sm">"Haan boliye."</div>
+                        </div>
+                        <div class="flex gap-3 md:gap-4">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-brand-500/20 text-brand-400 flex items-center justify-center shrink-0 font-bold"><i class="fa-solid fa-headset"></i></div>
+                            <div class="bg-dark-card p-3 md:p-4 rounded-2xl rounded-tl-none border border-white/5 text-gray-200 w-full text-sm">"Sir honestly ek observation thi. Jab koi buyer 'DLF Camellias broker' Google karta hai, aapka naam nahi aata. Woh traffic seedha aapke competitors ke paas ja raha hai jo SEO use kar rahe hain. Kya hum 15 minute is gap pe baat kar sakte hain?"</div>
+                        </div>
+                        <div class="flex gap-3 md:gap-4 flex-row-reverse">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-700 text-white flex items-center justify-center shrink-0 font-bold"><i class="fa-solid fa-user"></i></div>
+                            <div class="bg-gray-800 p-3 md:p-4 rounded-2xl rounded-tr-none border border-white/5 text-gray-200 w-full text-sm">"Abhi toh time nahi hai."</div>
+                        </div>
+                        <div class="flex gap-3 md:gap-4">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-brand-500/20 text-brand-400 flex items-center justify-center shrink-0 font-bold"><i class="fa-solid fa-headset"></i></div>
+                            <div class="bg-dark-card p-3 md:p-4 rounded-2xl rounded-tl-none border border-white/5 text-gray-200 w-full text-sm">"Main samajhta hoon sir. Agar main Thursday 4 PM ek short zoom invite bhejun, just to show you the data without any pitch, chalega?"</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Role Play 2 -->
+                <div class="w-full">
+                    <h3 class="text-lg md:text-xl font-bold mb-4 text-white border-l-4 border-status-success pl-3 md:pl-4">Role Play 2: Doctor/Clinic (Handling "Not Interested")</h3>
+                    <div class="flex flex-col gap-4 bg-[#050505] p-4 md:p-6 rounded-3xl border border-white/5 w-full">
+                        <div class="flex gap-3 md:gap-4 flex-row-reverse">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-700 text-white flex items-center justify-center shrink-0 font-bold"><i class="fa-solid fa-user-doctor"></i></div>
+                            <div class="bg-gray-800 p-3 md:p-4 rounded-2xl rounded-tr-none border border-white/5 text-gray-200 w-full text-sm">"Website wagera mein interest nahi hai mujhe."</div>
+                        </div>
+                        <div class="flex gap-3 md:gap-4">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-brand-500/20 text-brand-400 flex items-center justify-center shrink-0 font-bold"><i class="fa-solid fa-headset"></i></div>
+                            <div class="bg-dark-card p-3 md:p-4 rounded-2xl rounded-tl-none border border-white/5 text-gray-200 w-full text-sm">"Doctor, I completely respect that. Lekin kya aap nayi patient inquiries badhane mein interested hain?"</div>
+                        </div>
+                        <div class="flex gap-3 md:gap-4 flex-row-reverse">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-700 text-white flex items-center justify-center shrink-0 font-bold"><i class="fa-solid fa-user-doctor"></i></div>
+                            <div class="bg-gray-800 p-3 md:p-4 rounded-2xl rounded-tr-none border border-white/5 text-gray-200 w-full text-sm">"Patients toh sabko chahiye, par yeh website ka chakkar time consuming hota hai."</div>
+                        </div>
+                        <div class="flex gap-3 md:gap-4">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-brand-500/20 text-brand-400 flex items-center justify-center shrink-0 font-bold"><i class="fa-solid fa-headset"></i></div>
+                            <div class="bg-dark-card p-3 md:p-4 rounded-2xl rounded-tl-none border border-white/5 text-gray-200 w-full text-sm">"Exactly why humari delivery 7 days mein hoti hai without taking your time. Ek aur clinic yahan Noida mein humare GBP optimization se daily 3 appointment calls extra generate kar rahi hai. Kal 12 baje mil sakte hain to show you how?"</div>
+                        </div>
+                        <div class="flex gap-3 md:gap-4 flex-row-reverse">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-700 text-white flex items-center justify-center shrink-0 font-bold"><i class="fa-solid fa-user-doctor"></i></div>
+                            <div class="bg-gray-800 p-3 md:p-4 rounded-2xl rounded-tr-none border border-white/5 text-gray-200 w-full text-sm">"Theek hai, kal 12 baje aana."</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Role Play 3 -->
+                <div class="w-full">
+                    <h3 class="text-lg md:text-xl font-bold mb-4 text-white border-l-4 border-brand-400 pl-3 md:pl-4">Role Play 3: CA/Lawyer (Handling "Referrals Only")</h3>
+                    <div class="flex flex-col gap-4 bg-[#050505] p-4 md:p-6 rounded-3xl border border-white/5 w-full">
+                        <div class="flex gap-3 md:gap-4 flex-row-reverse">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-700 text-white flex items-center justify-center shrink-0 font-bold"><i class="fa-solid fa-scale-balanced"></i></div>
+                            <div class="bg-gray-800 p-3 md:p-4 rounded-2xl rounded-tr-none border border-white/5 text-gray-200 w-full text-sm">"Humara CA firm 15 saal se chal raha hai. Sara kaam network aur referrals se aata hai."</div>
+                        </div>
+                        <div class="flex gap-3 md:gap-4">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-brand-500/20 text-brand-400 flex items-center justify-center shrink-0 font-bold"><i class="fa-solid fa-headset"></i></div>
+                            <div class="bg-dark-card p-3 md:p-4 rounded-2xl rounded-tl-none border border-white/5 text-gray-200 w-full text-sm">"Referrals gold hain sir. Lekin kya aapko pata hai aaj kal log referral milne ke baad bhi call karne se pehle Google pe background check karte hain?"</div>
+                        </div>
+                        <div class="flex gap-3 md:gap-4 flex-row-reverse">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-700 text-white flex items-center justify-center shrink-0 font-bold"><i class="fa-solid fa-scale-balanced"></i></div>
+                            <div class="bg-gray-800 p-3 md:p-4 rounded-2xl rounded-tr-none border border-white/5 text-gray-200 w-full text-sm">"Haan karte toh honge."</div>
+                        </div>
+                        <div class="flex gap-3 md:gap-4">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-brand-500/20 text-brand-400 flex items-center justify-center shrink-0 font-bold"><i class="fa-solid fa-headset"></i></div>
+                            <div class="bg-dark-card p-3 md:p-4 rounded-2xl rounded-tl-none border border-white/5 text-gray-200 w-full text-sm">"Wahi problem hai. Jab woh search karte hain, unhe ek 2-star rating ya outdated page milta hai. Jo client convert hona tha, woh doubt mein chala jata hai. Main aapki digital credibility match karna chahta hoon aapke 15 saal ke experience se. 10 minute lenge meeting mein?"</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Role Play 4 -->
+                <div class="w-full">
+                    <h3 class="text-lg md:text-xl font-bold mb-4 text-white border-l-4 border-status-danger pl-3 md:pl-4">Role Play 4: "Too Expensive" Deep Dive to Close</h3>
+                    <div class="flex flex-col gap-4 bg-[#050505] p-4 md:p-6 rounded-3xl border border-white/5 w-full">
+                        <div class="flex gap-3 md:gap-4 flex-row-reverse">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-700 text-white flex items-center justify-center shrink-0 font-bold"><i class="fa-solid fa-user"></i></div>
+                            <div class="bg-gray-800 p-3 md:p-4 rounded-2xl rounded-tr-none border border-white/5 text-gray-200 w-full text-sm">"Growth pack ka ₹18,999 bahut expensive lag raha hai yaar. Freelancers toh 5000 mein bana dete hain."</div>
+                        </div>
+                        <div class="flex gap-3 md:gap-4">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-brand-500/20 text-brand-400 flex items-center justify-center shrink-0 font-bold"><i class="fa-solid fa-headset"></i></div>
+                            <div class="bg-dark-card p-3 md:p-4 rounded-2xl rounded-tl-none border border-white/5 text-gray-200 w-full text-sm">"Bikul sir, 5000 mein website ban jayegi. Lekin woh sirf dikhne wali hogi, bikne wali nahi. Hum yahan business asset bana rahe hain. Agar yeh setup mahine ki sirf 1 extra lead bhi laaye, toh aapka ROI kitna hoga?"</div>
+                        </div>
+                        <div class="flex gap-3 md:gap-4 flex-row-reverse">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-700 text-white flex items-center justify-center shrink-0 font-bold"><i class="fa-solid fa-user"></i></div>
+                            <div class="bg-gray-800 p-3 md:p-4 rounded-2xl rounded-tr-none border border-white/5 text-gray-200 w-full text-sm">"Lead aayegi tab na."</div>
+                        </div>
+                        <div class="flex gap-3 md:gap-4">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-brand-500/20 text-brand-400 flex items-center justify-center shrink-0 font-bold"><i class="fa-solid fa-headset"></i></div>
+                            <div class="bg-dark-card p-3 md:p-4 rounded-2xl rounded-tl-none border border-white/5 text-gray-200 w-full text-sm">"Understood. Agar price abhi barrier hai, toh main suggest karunga hum Launch Package (₹12,999) se start karte hain. Base foundation ban jayegi, later hum GBP aur Growth pe upgrade kar lenge. Deal?"</div>
+                        </div>
+                        <div class="flex gap-3 md:gap-4 flex-row-reverse">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-700 text-white flex items-center justify-center shrink-0 font-bold"><i class="fa-solid fa-user"></i></div>
+                            <div class="bg-gray-800 p-3 md:p-4 rounded-2xl rounded-tr-none border border-white/5 text-gray-200 w-full text-sm">"Thik hai, terms bhej do uske."</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FINAL SLIDE -->
+        <section id="final" class="module-section">
+            <div class="cover-slide min-h-[calc(100vh-4rem)] lg:min-h-screen flex flex-col justify-center items-center bg-cover-gradient relative px-6 py-12 text-center border-t-8 border-brand-500 w-full">
+                <i class="fa-solid fa-rocket text-5xl md:text-6xl text-brand-500 mb-8 animate-bounce"></i>
+                <h1 class="text-5xl md:text-6xl lg:text-8xl font-black tracking-tight mb-6">Now Go <span class="text-brand-400">Sell.</span></h1>
+                <p class="text-lg md:text-xl lg:text-2xl text-dark-sec mb-12 font-light px-4">Structure outlasts luck. Execution outlasts strategy.</p>
+                
+                <div class="bg-dark-card/50 backdrop-blur-md p-6 md:p-8 rounded-3xl border border-white/10 w-full max-w-lg">
+                    <p class="font-bold text-white text-lg mb-2">Harshdeep Singh</p>
+                    <p class="text-[10px] md:text-xs text-brand-400 font-semibold mb-6 uppercase tracking-widest break-words">Founder, JASUNN Growth Solutions</p>
+                    <div class="flex justify-center gap-6">
+                        <a href="mailto:contact@jasunngrowthsolutions.com" class="text-dark-sec hover:text-white transition-colors text-2xl"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://wa.me/918738873878" class="text-dark-sec hover:text-green-500 transition-colors text-2xl"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#" class="text-dark-sec hover:text-brand-400 transition-colors text-2xl"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- JavaScript for Mobile Menu & Scroll Spy -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menu-btn');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('.module-section');
+
+            // Mobile Menu Toggle
+            function toggleMenu() {
+                const isClosed = sidebar.classList.contains('-translate-x-full');
+                if (isClosed) {
+                    sidebar.classList.remove('-translate-x-full');
+                    overlay.classList.remove('hidden');
+                    menuBtn.innerHTML = '<i class="fa-solid fa-xmark text-xl"></i>';
+                    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                } else {
+                    sidebar.classList.add('-translate-x-full');
+                    overlay.classList.add('hidden');
+                    menuBtn.innerHTML = '<i class="fa-solid fa-bars text-xl"></i>';
+                    document.body.style.overflow = '';
+                }
+            }
+
+            menuBtn.addEventListener('click', toggleMenu);
+            overlay.addEventListener('click', toggleMenu);
+
+            // Close menu on link click (mobile)
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth < 1024) { // lg breakpoint
+                        toggleMenu();
+                    }
+                });
+            });
+
+            // Intersection Observer for Scroll Spy
+            const observerOptions = {
+                root: null,
+                rootMargin: '-50% 0px -50% 0px', // Trigger when section is in middle of viewport
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        // Remove active class from all
+                        navLinks.forEach(link => link.classList.remove('active'));
+                        // Add active class to corresponding link
+                        const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
+                        if (activeLink) {
+                            activeLink.classList.add('active');
+                            // Scroll sidebar to keep active link visible (optional enhancement)
+                            activeLink.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
